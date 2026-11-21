@@ -28,6 +28,8 @@
         "@type": "WholesaleStore",
         "name": "benz-opt.ru — Нефтепродукты оптом",
         "url": "https://benz-opt.ru/",
+        "email": "benz-opt@bk.ru",
+        "sameAs": ["https://t.me/samNeft"],
         "description": "Оптовые поставки светлых нефтепродуктов и СУГ по Российской Федерации железнодорожным и автомобильным транспортом. Прямые договоры, паспорта качества ГОСТ и К5, гарантированное агентское вознаграждение брокерам.",
         "areaServed": "RU",
         "priceRange": "₽₽₽"
@@ -178,56 +180,64 @@
         </a>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-zinc-300" aria-label="Основная навигация">
+        <nav class="hidden lg:flex items-center gap-5 text-sm font-medium text-zinc-300" aria-label="Основная навигация">
           <a href="#price-list" class="hover:text-brand-400 transition">Прайс-лист</a>
           <a href="#calculator" class="hover:text-brand-400 transition">Калькулятор ЖД/Авто</a>
           <a href="#brokers" class="hover:text-brand-400 transition">Брокерам</a>
           <a href="#faq" class="hover:text-brand-400 transition">Условия и FAQ</a>
         </nav>
 
-        <!-- Broker Badge (Wide Screens) -->
-        <div class="hidden xl:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold shrink-0">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span>Брокерам • Агентские гарантируем</span>
-        </div>
-
-        <!-- Header Actions -->
-        <div class="flex items-center gap-2">
-          <button
-            type="button"
-            onclick="copyCompliantPriceList()"
-            class="inline-flex items-center gap-1.5 px-3 py-2.5 rounded-xl bg-carbon-800 hover:bg-carbon-700 text-zinc-200 border border-carbon-600 text-xs sm:text-sm font-semibold transition cursor-pointer"
-            title="Скопировать обезличенный прайс-лист для Telegram и WhatsApp"
+        <!-- Header Contacts & Actions -->
+        <div class="flex items-center gap-2 sm:gap-2.5">
+          <!-- Email -->
+          <a
+            href="mailto:benz-opt@bk.ru"
+            class="hidden md:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-carbon-850 hover:bg-carbon-800 text-zinc-200 hover:text-white border border-carbon-700 text-xs font-semibold transition"
+            title="Написать на почту benz-opt@bk.ru"
           >
             <svg class="w-4 h-4 text-brand-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
-            <span class="hidden sm:inline">Прайс для TG/WA</span>
-            <span class="sm:hidden">TG/WA</span>
-          </button>
+            <span>benz-opt@bk.ru</span>
+          </a>
+
+          <!-- Telegram: Менеджер Александр -->
+          <a
+            href="https://t.me/samNeft"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 px-3 py-2 sm:py-2.5 rounded-xl bg-sky-500/15 hover:bg-sky-500/25 text-sky-300 hover:text-white border border-sky-500/40 text-xs font-bold transition shrink-0"
+            title="Написать менеджеру Александру в Telegram"
+          >
+            <svg class="w-4 h-4 text-sky-400 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+            </svg>
+            <span class="hidden sm:inline">Менеджер Александр</span>
+            <span class="sm:hidden">TG Александр</span>
+          </a>
 
           <button
             type="button"
             onclick="openQuoteModal('Запрос актуального КП и паспортов качества')"
-            class="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-400 active:bg-brand-600 text-white text-xs sm:text-sm font-bold shadow-lg shadow-brand-500/20 transition cursor-pointer"
+            class="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-brand-500 hover:bg-brand-400 active:bg-brand-600 text-white text-xs sm:text-sm font-bold shadow-lg shadow-brand-500/20 transition cursor-pointer shrink-0"
           >
             <span>Оставить заявку</span>
           </button>
-
-          <!-- Discrete Admin / Local Editor Button -->
-          <button
-            type="button"
-            onclick="openAdminModal()"
-            class="p-2.5 rounded-xl bg-carbon-850 hover:bg-carbon-700 text-zinc-400 hover:text-white border border-carbon-700 transition cursor-pointer"
-            title="Локальный редактор / Анти-НПЗ проверка"
-            aria-label="Управление прайсом"
-          >
-            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-          </button>
         </div>
+      </div>
+
+      <!-- Mobile Contact Strip (Email visible on phones) -->
+      <div class="flex md:hidden items-center justify-center gap-4 border-t border-carbon-800 py-1.5 text-xs">
+        <a href="mailto:benz-opt@bk.ru" class="inline-flex items-center gap-1.5 text-zinc-300 hover:text-brand-400 font-medium">
+          <svg class="w-3.5 h-3.5 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span>benz-opt@bk.ru</span>
+        </a>
+        <span class="text-carbon-700">|</span>
+        <a href="https://t.me/samNeft" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-sky-400 hover:text-sky-300 font-semibold">
+          <span>Telegram: Менеджер Александр</span>
+        </a>
       </div>
 
       <!-- Mobile Navigation Row -->
@@ -367,16 +377,6 @@
           <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight mt-1">Оптовые цены на нефтепродукты</h2>
           <p class="text-sm text-zinc-400 mt-1">Цены указаны с НДС за 1 тонну на базисе отгрузки. Нажмите «Рассчитать», чтобы подставить позицию в калькулятор доставки.</p>
         </div>
-        <button
-          type="button"
-          onclick="copyCompliantPriceList()"
-          class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-carbon-850 hover:bg-carbon-800 text-zinc-200 border border-carbon-700 text-sm font-semibold transition cursor-pointer self-start sm:self-auto"
-        >
-          <svg class="w-4 h-4 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2" />
-          </svg>
-          <span>Скопировать прайс (без НПЗ)</span>
-        </button>
       </div>
 
       <!-- Filter Bar -->
@@ -920,8 +920,16 @@
             >
               Стать партнером / Зафиксировать клиента
             </button>
+            <a
+              href="https://t.me/samNeft"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full py-3 px-6 rounded-xl bg-sky-500/15 hover:bg-sky-500/25 text-sky-300 border border-sky-500/40 font-bold text-sm text-center transition"
+            >
+              Написать менеджеру Александру в Telegram
+            </a>
             <p class="text-xs text-zinc-500 text-center">
-              Оперативный ответ менеджера в Telegram или по телефону
+              Почта для заявок и реквизитов: <a href="mailto:benz-opt@bk.ru" class="text-zinc-300 hover:text-brand-400 underline">benz-opt@bk.ru</a>
             </p>
           </div>
         </div>
@@ -1002,147 +1010,37 @@
 
   <!-- ==================== FOOTER ==================== -->
   <footer class="bg-carbon-950 text-zinc-400 border-t border-carbon-800 mt-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
-      <div class="flex items-center gap-2">
-        <span class="font-black text-base text-white">benz<span class="text-brand-500">-</span>opt<span class="text-brand-500">.ru</span></span>
-        <span class="text-zinc-600">|</span>
-        <span>Оптовые поставки нефтепродуктов по РФ (ЖД и Авто)</span>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col gap-5 text-xs">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <span class="font-black text-base text-white">benz<span class="text-brand-500">-</span>opt<span class="text-brand-500">.ru</span></span>
+          <span class="text-zinc-600">|</span>
+          <span>Оптовые поставки нефтепродуктов по РФ (ЖД и Авто)</span>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 text-xs font-semibold">
+          <a href="mailto:benz-opt@bk.ru" class="inline-flex items-center gap-1.5 text-zinc-300 hover:text-brand-400 transition">
+            <svg class="w-4 h-4 text-brand-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <span>benz-opt@bk.ru</span>
+          </a>
+          <a href="https://t.me/samNeft" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sky-400 hover:text-sky-300 transition">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+            </svg>
+            <span>Telegram: Менеджер Александр (@samNeft)</span>
+          </a>
+        </div>
       </div>
-      <div class="text-center sm:text-right text-zinc-500">
+
+      <div class="pt-4 border-t border-carbon-800/80 text-center sm:text-left text-zinc-500">
         Информация на сайте не является публичной офертой. Сведения о конкретных НПЗ не раскрываются в соответствии с законодательством РФ.
       </div>
     </div>
   </footer>
 
-  <!-- ==================== MODAL 1: LOCAL ADMIN / ANTI-REFINERY EDITOR ==================== -->
-  <div id="adminModal" class="hidden fixed inset-0 z-50 overflow-y-auto" aria-labelledby="adminModalTitle" role="dialog" aria-modal="true">
-    <div class="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity" onclick="closeAdminModal()"></div>
-    <div class="relative min-h-screen flex items-center justify-center p-2 sm:p-6">
-      <div class="relative bg-carbon-850 text-zinc-100 rounded-2xl shadow-2xl w-full max-w-5xl max-h-[92vh] flex flex-col overflow-hidden border border-carbon-700">
-        <div class="bg-carbon-950 px-5 py-4 flex items-center justify-between gap-3 shrink-0 border-b border-carbon-700">
-          <div>
-            <h2 id="adminModalTitle" class="text-lg font-extrabold flex flex-wrap items-center gap-2 text-white">
-              <span>Управление прайс-листом (Предпросмотр / Экспорт)</span>
-              <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">Анти-НПЗ фильтр активен</span>
-            </h2>
-            <p class="text-xs text-zinc-400 mt-0.5">Основное обновление для всех клиентов идет через вашего Telegram-бота в файл prices.json</p>
-          </div>
-          <button type="button" onclick="closeAdminModal()" class="p-2 rounded-xl text-zinc-400 hover:text-white hover:bg-carbon-800 transition cursor-pointer" aria-label="Закрыть">
-            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-
-        <div class="p-5 overflow-y-auto space-y-6 flex-1">
-          <!-- Add / Edit Form -->
-          <div class="bg-carbon-900 rounded-2xl border border-carbon-700 p-4 sm:p-5 space-y-4">
-            <div class="flex items-center justify-between">
-              <h3 id="adminFormTitle" class="text-sm font-bold text-white">Добавить новую позицию</h3>
-              <button id="adminCancelEditBtn" type="button" onclick="resetAdminForm()" class="hidden text-xs font-semibold text-zinc-400 hover:text-white cursor-pointer">
-                Отменить редактирование
-              </button>
-            </div>
-
-            <!-- Anti-Refinery Warning -->
-            <div id="complianceWarningBox" class="hidden rounded-xl bg-red-500/15 border border-red-500/50 p-3.5 text-xs sm:text-sm text-red-200 flex items-start gap-2.5">
-              <svg class="w-5 h-5 text-red-400 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-              </svg>
-              <div>
-                <div class="font-bold text-red-300">Внимание! Обнаружены запрещенные упоминания НПЗ / станций:</div>
-                <div id="complianceMatchedWords" class="font-semibold text-red-400 mt-0.5"></div>
-                <div class="mt-1 text-xs text-red-200">Замените названия заводов на обезличенные региональные базисы перед сохранением.</div>
-              </div>
-            </div>
-
-            <form id="adminProductForm" onsubmit="saveAdminProduct(event)" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-3">
-              <input type="hidden" id="editProductId" value="" />
-              <div class="lg:col-span-2">
-                <label class="block text-xs font-semibold text-zinc-400 mb-1">Наименование и класс *</label>
-                <input id="inpName" type="text" required placeholder="Напр.: ДТ-З (Ф), К5, кл. 1 (-26°C)" oninput="checkComplianceLive()" class="w-full px-3 py-2 rounded-xl border border-carbon-700 bg-carbon-850 text-white text-sm outline-none focus:border-brand-500" />
-              </div>
-              <div class="lg:col-span-2">
-                <label class="block text-xs font-semibold text-zinc-400 mb-1">Обезличенный базис *</label>
-                <input id="inpBasis" type="text" required placeholder="Напр.: Базис ПФО-3 (Татарстан)" oninput="checkComplianceLive()" class="w-full px-3 py-2 rounded-xl border border-carbon-700 bg-carbon-850 text-white text-sm outline-none focus:border-brand-500" />
-              </div>
-              <div>
-                <label class="block text-xs font-semibold text-zinc-400 mb-1">Категория *</label>
-                <select id="inpCategory" class="w-full px-3 py-2 rounded-xl border border-carbon-700 bg-carbon-850 text-white text-sm outline-none focus:border-brand-500">
-                  <option value="Бензин">Бензин</option>
-                  <option value="Дизельное топливо">Дизельное топливо</option>
-                  <option value="Авиа / Газ / Прочее">Авиа / Газ / Прочее</option>
-                </select>
-              </div>
-              <div>
-                <label class="block text-xs font-semibold text-zinc-400 mb-1">Отгрузка *</label>
-                <select id="inpDelivery" class="w-full px-3 py-2 rounded-xl border border-carbon-700 bg-carbon-850 text-white text-sm outline-none focus:border-brand-500">
-                  <option value="ЖД">ЖД</option>
-                  <option value="Авто">Авто</option>
-                </select>
-              </div>
-              <div>
-                <label class="block text-xs font-semibold text-zinc-400 mb-1">Цена (₽/т) *</label>
-                <input id="inpPrice" type="number" required min="1000" step="100" placeholder="86000" class="w-full px-3 py-2 rounded-xl border border-carbon-700 bg-carbon-850 text-white text-sm tabular-nums outline-none focus:border-brand-500" />
-              </div>
-              <div>
-                <label class="block text-xs font-semibold text-zinc-400 mb-1">Плотность (кг/л) *</label>
-                <input id="inpDensity" type="number" required min="0.4" max="1.2" step="0.005" value="0.830" class="w-full px-3 py-2 rounded-xl border border-carbon-700 bg-carbon-850 text-white text-sm tabular-nums outline-none focus:border-brand-500" />
-              </div>
-              <div class="sm:col-span-2 lg:col-span-3">
-                <label class="block text-xs font-semibold text-zinc-400 mb-1">Примечание (необязательно)</label>
-                <input id="inpNote" type="text" placeholder="Напр.: Уточняйте паспорт качества" oninput="checkComplianceLive()" class="w-full px-3 py-2 rounded-xl border border-carbon-700 bg-carbon-850 text-white text-sm outline-none focus:border-brand-500" />
-              </div>
-              <div class="flex items-end">
-                <button id="adminSubmitBtn" type="submit" class="w-full py-2 px-4 rounded-xl bg-brand-500 hover:bg-brand-400 text-white font-bold text-sm transition cursor-pointer">
-                  Добавить
-                </button>
-              </div>
-            </form>
-          </div>
-
-          <!-- Toolbar -->
-          <div class="flex flex-wrap items-center justify-between gap-3">
-            <h3 class="text-sm font-bold text-white">Текущие позиции (<span id="adminCount">16</span>)</h3>
-            <div class="flex flex-wrap items-center gap-2">
-              <button type="button" onclick="downloadPricesJson()" class="px-3.5 py-2 rounded-xl bg-carbon-800 hover:bg-carbon-700 text-zinc-100 border border-carbon-600 text-xs font-semibold transition cursor-pointer">
-                Скачать prices.json
-              </button>
-              <button type="button" onclick="copyCompliantPriceList()" class="px-3.5 py-2 rounded-xl bg-brand-500/15 hover:bg-brand-500/25 text-brand-400 border border-brand-500/30 text-xs font-semibold transition cursor-pointer">
-                Скопировать для TG/WA
-              </button>
-              <button id="resetDefaultBtn" type="button" onclick="handleResetDefaults()" class="px-3.5 py-2 rounded-xl bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/30 text-xs font-semibold transition cursor-pointer">
-                Сбросить к серверным
-              </button>
-            </div>
-          </div>
-
-          <!-- Admin Table -->
-          <div class="border border-carbon-700 rounded-2xl overflow-hidden">
-            <div class="overflow-x-auto">
-              <table class="w-full text-left border-collapse text-xs sm:text-sm">
-                <thead>
-                  <tr class="bg-carbon-950 border-b border-carbon-700 text-xs font-bold text-zinc-400">
-                    <th class="py-2.5 px-3">Продукт</th>
-                    <th class="py-2.5 px-3">Базис</th>
-                    <th class="py-2.5 px-3">Тип</th>
-                    <th class="py-2.5 px-3 text-right">Цена (₽/т)</th>
-                    <th class="py-2.5 px-3 text-right">Плотн.</th>
-                    <th class="py-2.5 px-3 text-right">Управление</th>
-                  </tr>
-                </thead>
-                <tbody id="adminTableBody" class="divide-y divide-carbon-800">
-                  <!-- Populated by JS -->
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==================== MODAL 2: QUOTE / LEAD FORM ==================== -->
+  <!-- ==================== MODAL: QUOTE / LEAD FORM ==================== -->
   <div id="quoteModal" class="hidden fixed inset-0 z-50 overflow-y-auto" aria-labelledby="quoteModalTitle" role="dialog" aria-modal="true">
     <div class="fixed inset-0 bg-black/80 backdrop-blur-sm transition-opacity" onclick="closeQuoteModal()"></div>
     <div class="relative min-h-screen flex items-center justify-center p-4">
@@ -1222,42 +1120,14 @@
     // =========================================================================
     // 1. CONFIGURATION (END-TO-END INTEGRATION)
     // =========================================================================
-    // URL вашего веб-приложения Google Apps Script (из инструкции deploy_guide.md).
-    // Пока здесь пустая строка, форма заявки работает в демо-режиме; как только вставите URL —
-    // все заявки с сайта начнут мгновенно прилетать вам в Telegram!
-    const LEADS_API_URL = '';
+    // URL вашего веб-приложения Google Apps Script для приема заявок в Telegram
+    const LEADS_API_URL = 'https://script.google.com/macros/s/AKfycbxJ6c6mTP14qRVgqXSugjt2ueAauNIOI5z6Yeyuz-qOdNEmB84eGmNPobhlzQal5_ge/exec';
 
     // Путь к файлу с актуальными ценами, который обновляет Telegram-бот на GitHub Pages
     const PRICES_JSON_URL = './prices.json';
-    const STORAGE_KEY = 'benz_opt_local_override_v1';
-
-    // Запрещенные слова (Анти-НПЗ фильтр)
-    const RESTRICTED_WORDS = [
-      'нпз', 'орск', 'орский', 'салават', 'танеко', 'пуровский',
-      'никель', 'аллагуват', 'биклянь', 'пуровск',
-      'лукойл', 'роснефть', 'газпром', 'татнефть', 'башнефть'
-    ];
 
     // Резервный прайс-лист (используется, если prices.json недоступен в локальном предпросмотре)
-    const DEFAULT_PRODUCTS = [
-      { id: 'p1', name: 'АИ-92, К5', category: 'Бензин', delivery: 'ЖД', basis: 'Базис ПФО-1 (Оренбургское направление)', price: 86000, density: 0.745, note: '' },
-      { id: 'p2', name: 'АИ-92, К5', category: 'Бензин', delivery: 'Авто', basis: 'Базис ПФО-1 (Оренбургское направление)', price: 81000, density: 0.745, note: '' },
-      { id: 'p3', name: 'ДТ-Е, К5', category: 'Дизельное топливо', delivery: 'Авто', basis: 'Базис ПФО-1 (Оренбургское направление)', price: 81000, density: 0.835, note: '' },
-      { id: 'p4', name: 'ДТ-З (Ф), К5', category: 'Дизельное топливо', delivery: 'ЖД', basis: 'Базис ПФО-1 (Оренбургское направление)', price: 104000, density: 0.825, note: '' },
-      { id: 'p5', name: 'ДТ-Е, К5', category: 'Дизельное топливо', delivery: 'ЖД', basis: 'Базис ПФО-2 (Республика Башкортостан)', price: 80000, density: 0.835, note: '' },
-      { id: 'p6', name: 'АИ-92, К3', category: 'Бензин', delivery: 'ЖД', basis: 'Базис ПФО-3 (Республика Татарстан)', price: 79000, density: 0.745, note: '' },
-      { id: 'p7', name: 'АИ-98, К5', category: 'Бензин', delivery: 'ЖД', basis: 'Базис ПФО-3 (Республика Татарстан)', price: 113000, density: 0.760, note: '' },
-      { id: 'p8', name: 'ДТ-З (Ф), К5, кл. 1 (-26°C)', category: 'Дизельное топливо', delivery: 'ЖД', basis: 'Базис ПФО-3 (Республика Татарстан)', price: 88000, density: 0.825, note: '' },
-      { id: 'p9', name: 'ДТ-З (Ф), К5, кл. 2 (-32°C)', category: 'Дизельное топливо', delivery: 'ЖД', basis: 'Базис ПФО-3 (Республика Татарстан)', price: 89000, density: 0.820, note: '' },
-      { id: 'p10', name: 'ДТ-А, К5', category: 'Дизельное топливо', delivery: 'ЖД', basis: 'Базис ПФО-3 (Республика Татарстан)', price: 91000, density: 0.815, note: 'Есть по 99 000 ₽/т — уточняйте паспорт' },
-      { id: 'p11', name: 'ТС-1, К5 (высший сорт)', category: 'Авиа / Газ / Прочее', delivery: 'ЖД', basis: 'Базис ПФО-3 (Республика Татарстан)', price: 139500, density: 0.780, note: '' },
-      { id: 'p12', name: 'ПБТ, ГОСТ', category: 'Авиа / Газ / Прочее', delivery: 'ЖД', basis: 'Базис ПФО-3 (Республика Татарстан)', price: 57000, density: 0.540, note: 'Загрузка цистерны ~36 т' },
-      { id: 'p13', name: 'АИ-92, К5, СТО', category: 'Бензин', delivery: 'ЖД', basis: 'Базис УрФО-1 (ЯНАО)', price: 77000, density: 0.745, note: '' },
-      { id: 'p14', name: 'АИ-95, К5, СТО', category: 'Бензин', delivery: 'ЖД', basis: 'Базис УрФО-1 (ЯНАО)', price: 80000, density: 0.750, note: '' },
-      { id: 'p15', name: 'ДТ-А, К8, кл. 3 (-8°C)', category: 'Дизельное топливо', delivery: 'ЖД', basis: 'Базис УрФО-1 (ЯНАО)', price: 99000, density: 0.825, note: '' },
-      { id: 'p16', name: 'БГС', category: 'Авиа / Газ / Прочее', delivery: 'ЖД', basis: 'Базис УрФО-1 (ЯНАО)', price: 59000, density: 0.680, note: '' }
-    ];
-
+// ... existing code ... -->
     // =========================================================================
     // 2. APPLICATION STATE
     // =========================================================================
@@ -1267,95 +1137,15 @@
     let autoUnit = 'tons';
     let railDaysManuallyEdited = false;
     let lastCalcData = null;
-    let resetConfirmPending = false;
-    let resetConfirmTimer = null;
 
     // =========================================================================
     // 3. HELPERS
-    // =========================================================================
-    function formatInt(val) {
-      return Math.round(Number(val) || 0).toLocaleString('ru-RU');
-    }
-    function formatRub(val) {
-      return `${formatInt(val)} ₽`;
-    }
-    function formatRubDec(val) {
-      const num = Number(val) || 0;
-      return `${num.toLocaleString('ru-RU', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} ₽`;
-    }
-    function escapeHtml(str) {
-      return String(str || '')
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#39;');
-    }
-
-    function showToast(message, type = 'success') {
-      const container = document.getElementById('toastContainer');
-      if (!container) return;
-      const toast = document.createElement('div');
-      const bgClass = type === 'error'
-        ? 'bg-red-600 text-white'
-        : type === 'warning'
-          ? 'bg-amber-500 text-carbon-950'
-          : 'bg-carbon-800 text-white border border-brand-500/50';
-      toast.className = `pointer-events-auto px-4 py-3 rounded-xl shadow-2xl text-xs sm:text-sm font-bold flex items-center gap-2.5 max-w-sm transition-all duration-300 opacity-0 translate-y-2 ${bgClass}`;
-      toast.textContent = message;
-      container.appendChild(toast);
-      requestAnimationFrame(() => toast.classList.remove('opacity-0', 'translate-y-2'));
-      setTimeout(() => {
-        toast.classList.add('opacity-0', 'translate-y-2');
-        setTimeout(() => toast.remove(), 300);
-      }, 3400);
-    }
-
-    function copyTextToClipboard(text, successMsg) {
-      try {
-        const textarea = document.createElement('textarea');
-        textarea.value = text;
-        textarea.setAttribute('readonly', '');
-        textarea.style.position = 'fixed';
-        textarea.style.left = '-9999px';
-        document.body.appendChild(textarea);
-        textarea.select();
-        textarea.setSelectionRange(0, textarea.value.length);
-        const copied = document.execCommand('copy');
-        document.body.removeChild(textarea);
-        if (copied) {
-          showToast(successMsg || 'Скопировано в буфер обмена');
-          return;
-        }
-      } catch (e) {}
-
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text)
-          .then(() => showToast(successMsg || 'Скопировано в буфер обмена'))
-          .catch(() => showToast('Не удалось скопировать текст', 'error'));
-      } else {
-        showToast('Не удалось скопировать текст', 'error');
-      }
-    }
-
+// ... existing code ... -->
     // =========================================================================
     // 4. DATA LOADING (LIVE prices.json -> FALLBACK DEFAULT)
     // =========================================================================
     async function loadProducts() {
-      // 1. Check if user has local unsaved draft in browser (for local testing)
-      try {
-        const localRaw = localStorage.getItem(STORAGE_KEY);
-        if (localRaw) {
-          const parsed = JSON.parse(localRaw);
-          if (Array.isArray(parsed) && parsed.length > 0) {
-            products = parsed;
-            updateDateDisplay(lastUpdatedLabel);
-            return;
-          }
-        }
-      } catch (e) {}
-
-      // 2. Fetch live prices.json updated by Telegram Bot (cache-busted)
+      // Fetch live prices.json updated by Telegram Bot (cache-busted)
       try {
         const res = await fetch(`${PRICES_JSON_URL}?v=${Date.now()}`, { cache: 'no-store' });
         if (res.ok) {
@@ -1373,7 +1163,7 @@
         // Silent fallback when running in offline/preview mode
       }
 
-      // 3. Fallback to embedded default products
+      // Fallback to embedded default products
       products = DEFAULT_PRODUCTS.map(item => ({ ...item }));
       updateDateDisplay(lastUpdatedLabel);
     }
@@ -1383,683 +1173,20 @@
       if (dateEl) dateEl.textContent = text;
     }
 
-    function persistLocalOverride() {
-      try {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(products));
-      } catch (e) {}
-    }
-
     // =========================================================================
     // 5. PRICE LIST RENDERING
-    // =========================================================================
-    function updateStatsAndSelectors() {
-      const uniqueBases = [...new Set(products.map(p => p.basis))];
-      const statItems = document.getElementById('statTotalItems');
-      const statBases = document.getElementById('statTotalBases');
-      if (statItems) statItems.textContent = products.length;
-      if (statBases) statBases.textContent = uniqueBases.length;
-
-      const basisSelect = document.getElementById('filterBasis');
-      if (basisSelect) {
-        const prev = basisSelect.value;
-        basisSelect.innerHTML = '<option value="all">Все региональные базисы</option>' +
-          uniqueBases.map(b => `<option value="${escapeHtml(b)}">${escapeHtml(b)}</option>`).join('');
-        basisSelect.value = uniqueBases.includes(prev) ? prev : 'all';
-      }
-
-      const calcSelect = document.getElementById('calcProductSelect');
-      if (calcSelect) {
-        const prev = calcSelect.value;
-        calcSelect.innerHTML = '<option value="custom">— Свой расчет (ввести цену и плотность вручную) —</option>' +
-          products.map(p => `<option value="${escapeHtml(p.id)}">${escapeHtml(`${p.name} (${p.delivery}) — ${formatRub(p.price)}/т | ${p.basis}`)}</option>`).join('');
-        if (products.some(p => p.id === prev)) calcSelect.value = prev;
-      }
-    }
-
-    function getFilteredProducts() {
-      const search = (document.getElementById('filterSearch')?.value || '').trim().toLowerCase();
-      const category = document.getElementById('filterCategory')?.value || 'all';
-      const delivery = document.getElementById('filterDelivery')?.value || 'all';
-      const basis = document.getElementById('filterBasis')?.value || 'all';
-
-      return products.filter(p => {
-        if (category !== 'all' && p.category !== category) return false;
-        if (delivery !== 'all' && p.delivery !== delivery) return false;
-        if (basis !== 'all' && p.basis !== basis) return false;
-        if (search) {
-          const hay = `${p.name} ${p.basis} ${p.category} ${p.delivery} ${p.note || ''}`.toLowerCase();
-          if (!hay.includes(search)) return false;
-        }
-        return true;
-      });
-    }
-
-    function renderPriceList() {
-      const filtered = getFilteredProducts();
-      const tbody = document.getElementById('priceTableBody');
-      const cards = document.getElementById('priceCardsContainer');
-      const emptyState = document.getElementById('priceEmptyState');
-      const countEl = document.getElementById('filteredCount');
-
-      if (countEl) countEl.textContent = `Показано: ${filtered.length} из ${products.length}`;
-
-      if (filtered.length === 0) {
-        if (tbody) tbody.innerHTML = '';
-        if (cards) cards.innerHTML = '';
-        if (emptyState) emptyState.classList.remove('hidden');
-        return;
-      }
-
-      if (emptyState) emptyState.classList.add('hidden');
-
-      if (tbody) {
-        tbody.innerHTML = filtered.map(p => {
-          const pricePerLiter = (p.price / 1000) * p.density;
-          const badgeClass = p.delivery === 'ЖД'
-            ? 'bg-sky-500/15 text-sky-400 border-sky-500/30'
-            : 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30';
-          const icon = p.delivery === 'ЖД' ? '🚂' : '🚛';
-
-          return `
-            <tr class="hover:bg-carbon-800/70 transition">
-              <td class="py-3.5 px-5">
-                <div class="font-bold text-white">${escapeHtml(p.name)}</div>
-                <div class="text-xs text-zinc-500 mt-0.5">${escapeHtml(p.category)} · плотн. ${p.density}</div>
-                ${p.note ? `<div class="inline-block mt-1.5 text-[11px] font-semibold text-brand-400 bg-brand-500/10 border border-brand-500/30 px-2 py-0.5 rounded-md">${escapeHtml(p.note)}</div>` : ''}
-              </td>
-              <td class="py-3.5 px-4">
-                <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg border text-xs font-bold ${badgeClass}">
-                  <span>${icon}</span>
-                  <span>${escapeHtml(p.delivery)}</span>
-                </span>
-              </td>
-              <td class="py-3.5 px-4 text-zinc-300 text-xs sm:text-sm font-medium">
-                ${escapeHtml(p.basis)}
-              </td>
-              <td class="py-3.5 px-4 text-right font-black text-white text-base tabular-nums whitespace-nowrap">
-                ${formatRub(p.price)}
-              </td>
-              <td class="py-3.5 px-4 text-right text-zinc-400 font-medium tabular-nums whitespace-nowrap">
-                ${formatRubDec(pricePerLiter)}
-              </td>
-              <td class="py-3.5 px-5 text-right whitespace-nowrap">
-                <div class="inline-flex items-center gap-1.5">
-                  <button type="button" onclick="selectProductForCalc('${escapeHtml(p.id)}')" class="px-3 py-1.5 rounded-lg bg-brand-500/15 hover:bg-brand-500 text-brand-400 hover:text-white border border-brand-500/40 text-xs font-bold transition cursor-pointer">
-                    Рассчитать
-                  </button>
-                  <button type="button" onclick="openQuoteForProduct('${escapeHtml(p.id)}')" class="px-3 py-1.5 rounded-lg bg-carbon-700 hover:bg-carbon-600 text-white text-xs font-semibold transition cursor-pointer">
-                    Запросить
-                  </button>
-                </div>
-              </td>
-            </tr>
-          `;
-        }).join('');
-      }
-
-      if (cards) {
-        cards.innerHTML = filtered.map(p => {
-          const pricePerLiter = (p.price / 1000) * p.density;
-          const badgeClass = p.delivery === 'ЖД'
-            ? 'bg-sky-500/15 text-sky-400 border-sky-500/30'
-            : 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30';
-          const icon = p.delivery === 'ЖД' ? '🚂' : '🚛';
-
-          return `
-            <div class="bg-carbon-850 rounded-2xl border border-carbon-700 p-4 flex flex-col justify-between space-y-3.5 shadow-lg">
-              <div class="space-y-2.5">
-                <div class="flex items-start justify-between gap-2">
-                  <div>
-                    <div class="font-extrabold text-white text-base leading-snug">${escapeHtml(p.name)}</div>
-                    <div class="text-xs text-zinc-500 mt-0.5">${escapeHtml(p.category)} · плотн. ${p.density}</div>
-                  </div>
-                  <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg border text-xs font-bold shrink-0 ${badgeClass}">
-                    <span>${icon}</span>
-                    <span>${escapeHtml(p.delivery)}</span>
-                  </span>
-                </div>
-
-                <div class="text-xs text-zinc-400 bg-carbon-900 rounded-xl px-3 py-2 border border-carbon-800">
-                  <span>Базис:</span> <span class="font-semibold text-zinc-200">${escapeHtml(p.basis)}</span>
-                </div>
-
-                ${p.note ? `<div class="text-xs font-semibold text-brand-400 bg-brand-500/10 border border-brand-500/30 px-3 py-1.5 rounded-xl">${escapeHtml(p.note)}</div>` : ''}
-              </div>
-
-              <div class="space-y-3 pt-2 border-t border-carbon-800">
-                <div class="flex items-baseline justify-between">
-                  <div>
-                    <span class="text-xl font-black text-white tabular-nums">${formatRub(p.price)}</span>
-                    <span class="text-xs text-zinc-500">/ т</span>
-                  </div>
-                  <div class="text-xs font-semibold text-zinc-400 tabular-nums">
-                    ≈ ${formatRubDec(pricePerLiter)} / л
-                  </div>
-                </div>
-
-                <div class="grid grid-cols-2 gap-2">
-                  <button type="button" onclick="selectProductForCalc('${escapeHtml(p.id)}')" class="py-2.5 px-3 rounded-xl bg-brand-500/15 hover:bg-brand-500 text-brand-400 hover:text-white border border-brand-500/40 text-xs font-bold transition cursor-pointer">
-                    Рассчитать
-                  </button>
-                  <button type="button" onclick="openQuoteForProduct('${escapeHtml(p.id)}')" class="py-2.5 px-3 rounded-xl bg-carbon-700 hover:bg-carbon-600 text-white text-xs font-bold transition cursor-pointer">
-                    Запросить КП
-                  </button>
-                </div>
-              </div>
-            </div>
-          `;
-        }).join('');
-      }
-    }
-
-    function quickFilterCategory(cat) {
-      const sel = document.getElementById('filterCategory');
-      if (sel) sel.value = cat;
-      renderPriceList();
-    }
-
-    function resetFilters() {
-      ['filterSearch', 'filterCategory', 'filterDelivery', 'filterBasis'].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.value = id === 'filterSearch' ? '' : 'all';
-      });
-      renderPriceList();
-    }
-
-    // =========================================================================
-    // 6. LOGISTICS CALCULATOR
-    // =========================================================================
-    function switchCalcMode(mode) {
-      calcMode = mode === 'rail' ? 'rail' : 'auto';
-      const btnAuto = document.getElementById('tabBtnAuto');
-      const btnRail = document.getElementById('tabBtnRail');
-      const autoPanel = document.getElementById('autoInputsPanel');
-      const railPanel = document.getElementById('railInputsPanel');
-      const railBreakdown = document.getElementById('resRailBreakdown');
-
-      if (calcMode === 'auto') {
-        if (btnAuto) btnAuto.className = 'py-2.5 px-3 rounded-lg text-xs sm:text-sm font-bold transition flex items-center justify-center gap-1.5 cursor-pointer bg-brand-500 text-white shadow-sm';
-        if (btnRail) btnRail.className = 'py-2.5 px-3 rounded-lg text-xs sm:text-sm font-bold transition flex items-center justify-center gap-1.5 cursor-pointer text-zinc-400 hover:text-white';
-        if (autoPanel) autoPanel.classList.remove('hidden');
-        if (railPanel) railPanel.classList.add('hidden');
-        if (railBreakdown) railBreakdown.classList.add('hidden');
-      } else {
-        if (btnRail) btnRail.className = 'py-2.5 px-3 rounded-lg text-xs sm:text-sm font-bold transition flex items-center justify-center gap-1.5 cursor-pointer bg-brand-500 text-white shadow-sm';
-        if (btnAuto) btnAuto.className = 'py-2.5 px-3 rounded-lg text-xs sm:text-sm font-bold transition flex items-center justify-center gap-1.5 cursor-pointer text-zinc-400 hover:text-white';
-        if (railPanel) railPanel.classList.remove('hidden');
-        if (autoPanel) autoPanel.classList.add('hidden');
-        if (railBreakdown) railBreakdown.classList.remove('hidden');
-      }
-      recalculate();
-    }
-
-    function setAutoUnit(unit) {
-      if (autoUnit === unit) return;
-      const volInput = document.getElementById('autoVolume');
-      const density = Math.max(0.4, parseFloat(document.getElementById('calcDensity')?.value) || 0.835);
-      const currentVal = parseFloat(volInput?.value) || 0;
-      autoUnit = unit;
-
-      const btnTons = document.getElementById('unitBtnTons');
-      const btnLiters = document.getElementById('unitBtnLiters');
-      const label = document.getElementById('autoVolumeLabel');
-
-      if (autoUnit === 'tons') {
-        if (btnTons) btnTons.className = 'px-2.5 py-1 rounded-md bg-brand-500 text-white shadow-sm cursor-pointer';
-        if (btnLiters) btnLiters.className = 'px-2.5 py-1 rounded-md text-zinc-400 hover:text-white cursor-pointer';
-        if (label) label.textContent = 'Объем партии (тонн)';
-        if (volInput) volInput.value = Math.max(1, Math.round((currentVal * density) / 1000));
-      } else {
-        if (btnLiters) btnLiters.className = 'px-2.5 py-1 rounded-md bg-brand-500 text-white shadow-sm cursor-pointer';
-        if (btnTons) btnTons.className = 'px-2.5 py-1 rounded-md text-zinc-400 hover:text-white cursor-pointer';
-        if (label) label.textContent = 'Объем партии (литров)';
-        if (volInput) volInput.value = Math.max(100, Math.round((currentVal * 1000) / density));
-      }
-      recalculate();
-    }
-
-    function setAutoPresetTons(tons) {
-      const density = Math.max(0.4, parseFloat(document.getElementById('calcDensity')?.value) || 0.835);
-      const volInput = document.getElementById('autoVolume');
-      if (!volInput) return;
-      volInput.value = autoUnit === 'tons' ? tons : Math.round((tons * 1000) / density);
-      recalculate();
-    }
-
-    function onRailDistanceInput() {
-      if (!railDaysManuallyEdited) autoEstimateRailDays(false);
-      else recalculate();
-    }
-
-    function onRailDaysManualEdit() {
-      railDaysManuallyEdited = true;
-      recalculate();
-    }
-
-    function autoEstimateRailDays(resetFlag = true) {
-      if (resetFlag) railDaysManuallyEdited = false;
-      const dist = Math.max(0, parseFloat(document.getElementById('railDistance')?.value) || 0);
-      const estimatedDays = Math.max(4, Math.ceil((dist * 2) / 300) + 4);
-      const daysInput = document.getElementById('railDays');
-      if (daysInput) daysInput.value = estimatedDays;
-      recalculate();
-    }
-
-    function onCalcProductChange() {
-      const sel = document.getElementById('calcProductSelect');
-      if (!sel || sel.value === 'custom') {
-        recalculate();
-        return;
-      }
-      const product = products.find(p => p.id === sel.value);
-      if (!product) return;
-
-      document.getElementById('calcPriceTon').value = product.price;
-      document.getElementById('calcDensity').value = product.density;
-      const tonsPerWagonEl = document.getElementById('railTonsPerWagon');
-      if (tonsPerWagonEl) tonsPerWagonEl.value = product.name.toUpperCase().includes('ПБТ') ? 36 : 60;
-
-      switchCalcMode(product.delivery === 'ЖД' ? 'rail' : 'auto');
-    }
-
-    function selectProductForCalc(productId) {
-      const sel = document.getElementById('calcProductSelect');
-      if (sel) {
-        sel.value = productId;
-        onCalcProductChange();
-      }
-      document.getElementById('calculator')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      showToast('Позиция загружена в калькулятор');
-    }
-
-    function recalculate() {
-      const pricePerTon = Math.max(0, parseFloat(document.getElementById('calcPriceTon')?.value) || 0);
-      const density = Math.max(0.4, parseFloat(document.getElementById('calcDensity')?.value) || 0.835);
-      const sel = document.getElementById('calcProductSelect');
-      const selectedProduct = sel && sel.value !== 'custom' ? products.find(p => p.id === sel.value) : null;
-      const productLabel = selectedProduct ? `${selectedProduct.name} (${selectedProduct.basis})` : 'Свой расчет';
-
-      let tons = 0, liters = 0, logisticsTotal = 0;
-      let railTariffCost = 0, railRentCost = 0, railFeesCost = 0;
-      let modeDetailsText = '';
-
-      if (calcMode === 'auto') {
-        const rawVol = Math.max(0.1, parseFloat(document.getElementById('autoVolume')?.value) || 1);
-        if (autoUnit === 'tons') {
-          tons = rawVol;
-          liters = (tons * 1000) / density;
-          const convEl = document.getElementById('autoVolumeConverted');
-          if (convEl) convEl.textContent = `≈ ${formatInt(liters)} л`;
-        } else {
-          liters = rawVol;
-          tons = (liters * density) / 1000;
-          const convEl = document.getElementById('autoVolumeConverted');
-          if (convEl) convEl.textContent = `≈ ${tons.toFixed(2)} т`;
-        }
-
-        const distance = Math.max(0, parseFloat(document.getElementById('autoDistance')?.value) || 0);
-        const rateKm = Math.max(0, parseFloat(document.getElementById('autoRateKm')?.value) || 0);
-        const roundTrip = Boolean(document.getElementById('autoRoundTrip')?.checked);
-        const extra = Math.max(0, parseFloat(document.getElementById('autoExtra')?.value) || 0);
-
-        logisticsTotal = ((roundTrip ? distance * 2 : distance) * rateKm) + extra;
-        modeDetailsText = `Доставка: Авто (бензовоз), ${formatInt(distance)} км ${roundTrip ? '(туда-обратно)' : '(в одну сторону)'}, тариф ${formatRub(rateKm)}/км`;
-      } else {
-        const wagons = Math.max(1, parseInt(document.getElementById('railWagons')?.value, 10) || 1);
-        const tonsPerWagon = Math.max(1, parseFloat(document.getElementById('railTonsPerWagon')?.value) || 60);
-        const distance = Math.max(0, parseFloat(document.getElementById('railDistance')?.value) || 0);
-        const tariff = Math.max(0, parseFloat(document.getElementById('railTariff')?.value) || 0);
-        const rentPerDay = Math.max(0, parseFloat(document.getElementById('railRentPerDay')?.value) || 0);
-        const days = Math.max(1, parseInt(document.getElementById('railDays')?.value, 10) || 1);
-        const stationFees = Math.max(0, parseFloat(document.getElementById('railStationFees')?.value) || 0);
-
-        tons = wagons * tonsPerWagon;
-        liters = (tons * 1000) / density;
-        railTariffCost = tons * distance * tariff;
-        railRentCost = wagons * rentPerDay * days;
-        railFeesCost = wagons * stationFees;
-        logisticsTotal = railTariffCost + railRentCost + railFeesCost;
-
-        modeDetailsText = `Доставка: ЖД (${wagons} цист. × ${tonsPerWagon} т), расстояние ${formatInt(distance)} км, оборот ${days} сут.`;
-      }
-
-      const fuelCost = tons * pricePerTon;
-      const grandTotal = fuelCost + logisticsTotal;
-      const deliveryPerTon = tons > 0 ? logisticsTotal / tons : 0;
-      const deliveryPerLiter = liters > 0 ? logisticsTotal / liters : 0;
-      const finalPerTon = tons > 0 ? grandTotal / tons : 0;
-      const finalPerLiter = liters > 0 ? grandTotal / liters : 0;
-
-      const setTxt = (id, text) => { const el = document.getElementById(id); if (el) el.textContent = text; };
-      const tonsFormatted = Number.isInteger(tons) ? tons : tons.toFixed(1);
-
-      setTxt('resVolumeBadge', `${tonsFormatted} т / ${formatInt(liters)} л`);
-      setTxt('resFinalTon', formatRub(finalPerTon));
-      setTxt('resFinalLiter', formatRubDec(finalPerLiter));
-      setTxt('resGrandTotal', formatRub(grandTotal));
-      setTxt('resFuelCost', formatRub(fuelCost));
-      setTxt('resLogisticsTotal', formatRub(logisticsTotal));
-      setTxt('resDeliveryPerTon', `+${formatRub(deliveryPerTon)}/т`);
-      setTxt('resDeliveryPerLiter', `+${formatRubDec(deliveryPerLiter)}/л`);
-
-      if (calcMode === 'rail') {
-        setTxt('resRailTariffCost', formatRub(railTariffCost));
-        setTxt('resRailRentCost', formatRub(railRentCost));
-        setTxt('resRailFeesCost', formatRub(railFeesCost));
-      }
-
-      lastCalcData = {
-        calcMode, productLabel, pricePerTon, density, tons: tonsFormatted, liters,
-        modeDetailsText, fuelCost, logisticsTotal, railTariffCost, railRentCost,
-        railFeesCost, deliveryPerTon, deliveryPerLiter, finalPerTon, finalPerLiter, grandTotal
-      };
-    }
-
-    function buildCalcSummaryText() {
-      if (!lastCalcData) return '';
-      const d = lastCalcData;
-      const lines = [
-        `📊 ПРЕДВАРИТЕЛЬНЫЙ РАСЧЕТ | benz-opt.ru`,
-        `Позиция: ${d.productLabel}`,
-        `Цена на базисе: ${formatRub(d.pricePerTon)}/т (плотность ${d.density})`,
-        `Объем партии: ${d.tons} т (≈ ${formatInt(d.liters)} л)`,
-        `${d.modeDetailsText}`,
-        ``,
-        `💰 Стоимость топлива: ${formatRub(d.fuelCost)}`,
-        `🚚 Ориентировочная логистика: ${formatRub(d.logisticsTotal)} (+${formatRub(d.deliveryPerTon)}/т | +${formatRubDec(d.deliveryPerLiter)}/л)`
-      ];
-      if (d.calcMode === 'rail') {
-        lines.push(`   • ЖД-тариф: ${formatRub(d.railTariffCost)}`);
-        lines.push(`   • Аренда цистерн: ${formatRub(d.railRentCost)}`);
-        lines.push(`   • Станционные сборы: ${formatRub(d.railFeesCost)}`);
-      }
-      lines.push(``);
-      lines.push(`✅ ОРИЕНТИРОВОЧНО С ДОСТАВКОЙ: ${formatRub(d.finalPerTon)}/т (${formatRubDec(d.finalPerLiter)}/л)`);
-      lines.push(`🧾 ОРИЕНТИРОВОЧНАЯ СУММА ПАРТИИ: ${formatRub(d.grandTotal)}`);
-      lines.push(``);
-      lines.push(`⚠️ Внимание: расчет стоимости доставки по Авто и ЖД является предварительным. Точный расчет может дать только менеджер после оформления заявки.`);
-      return lines.join('\n');
-    }
-
-    function copyCalcSummary() {
-      const text = buildCalcSummaryText();
-      if (text) copyTextToClipboard(text, 'Предварительный расчет скопирован для TG/WA');
-    }
-
+// ... existing code ... -->
     function sendQuoteWithCalculation() {
       openQuoteModal(buildCalcSummaryText());
     }
 
     // =========================================================================
-    // 7. COMPLIANT EXPORT (TG / WHATSAPP)
-    // =========================================================================
-    function copyCompliantPriceList() {
-      const today = new Date().toLocaleDateString('ru-RU');
-      const grouped = {};
-      products.forEach(p => {
-        if (!grouped[p.basis]) grouped[p.basis] = [];
-        grouped[p.basis].push(p);
-      });
-
-      const lines = [
-        `⛽ benz-opt.ru | Актуальный оптовый прайс-лист на ${today}`,
-        `Работаем с брокерами, агентские гарантируем!`,
-        ``
-      ];
-
-      Object.keys(grouped).forEach(basis => {
-        lines.push(`📍 ${basis.toUpperCase()}`);
-        grouped[basis].forEach(item => {
-          const notePart = item.note ? ` (${item.note})` : '';
-          lines.push(`▪️ ${item.name} (${item.delivery}) — ${formatRub(item.price)}/т${notePart}`);
-        });
-        lines.push(``);
-      });
-
-      lines.push(`⚠️ В соответствии с законодательством РФ наименования НПЗ и заводских станций в открытой рассылке не указываются. Паспорта качества — по запросу после верификации.`);
-      lines.push(`⚠️ Расчет доставки (Авто/ЖД) — предварительный, точный расчет предоставляет менеджер по заявке.`);
-
-      copyTextToClipboard(lines.join('\n'), 'Обезличенный прайс-лист скопирован для TG/WA');
-    }
-
-    // =========================================================================
-    // 8. ADMIN PANEL (LOCAL PREVIEW / JSON EXPORT + ANTI-REFINERY FILTER)
-    // =========================================================================
-    function openAdminModal() {
-      document.getElementById('adminModal')?.classList.remove('hidden');
-      renderAdminTable();
-      checkComplianceLive();
-    }
-
-    function closeAdminModal() {
-      document.getElementById('adminModal')?.classList.add('hidden');
-      resetAdminForm();
-    }
-
-    function checkComplianceLive() {
-      const combined = `${document.getElementById('inpName')?.value || ''} ${document.getElementById('inpBasis')?.value || ''} ${document.getElementById('inpNote')?.value || ''}`.toLowerCase();
-      const matched = RESTRICTED_WORDS.filter(word => combined.includes(word));
-      const box = document.getElementById('complianceWarningBox');
-      const wordsEl = document.getElementById('complianceMatchedWords');
-      if (matched.length > 0) {
-        box?.classList.remove('hidden');
-        if (wordsEl) wordsEl.textContent = `Найдено: «${matched.join('», «')}»`;
-      } else {
-        box?.classList.add('hidden');
-      }
-      return matched;
-    }
-
-    function renderAdminTable() {
-      const tbody = document.getElementById('adminTableBody');
-      const countEl = document.getElementById('adminCount');
-      if (countEl) countEl.textContent = products.length;
-      if (!tbody) return;
-
-      tbody.innerHTML = products.map(p => `
-        <tr class="hover:bg-carbon-800/70">
-          <td class="py-2.5 px-3 font-semibold text-white">
-            <div>${escapeHtml(p.name)}</div>
-            ${p.note ? `<div class="text-[11px] font-normal text-brand-400">${escapeHtml(p.note)}</div>` : ''}
-          </td>
-          <td class="py-2.5 px-3 text-zinc-400 text-xs">${escapeHtml(p.basis)}</td>
-          <td class="py-2.5 px-3">
-            <span class="px-2 py-0.5 rounded-md text-xs font-bold ${p.delivery === 'ЖД' ? 'bg-sky-500/15 text-sky-400' : 'bg-emerald-500/15 text-emerald-400'}">
-              ${escapeHtml(p.delivery)}
-            </span>
-          </td>
-          <td class="py-2.5 px-3 text-right font-bold text-white tabular-nums">${formatRub(p.price)}</td>
-          <td class="py-2.5 px-3 text-right text-zinc-400 tabular-nums">${p.density}</td>
-          <td class="py-2.5 px-3 text-right whitespace-nowrap">
-            <button type="button" onclick="editAdminProduct('${escapeHtml(p.id)}')" class="px-2.5 py-1 rounded-lg bg-carbon-800 hover:bg-brand-500 text-zinc-300 hover:text-white text-xs font-semibold transition cursor-pointer mr-1">Изм.</button>
-            <button type="button" onclick="deleteAdminProduct('${escapeHtml(p.id)}')" class="px-2.5 py-1 rounded-lg bg-red-500/15 hover:bg-red-500 text-red-400 hover:text-white text-xs font-semibold transition cursor-pointer">Удал.</button>
-          </td>
-        </tr>
-      `).join('');
-    }
-
-    function saveAdminProduct(event) {
-      event.preventDefault();
-      const matched = checkComplianceLive();
-      if (matched.length > 0) {
-        showToast(`Уберите запрещённые названия НПЗ/станций: ${matched.join(', ')}`, 'error');
-        return;
-      }
-
-      const editId = document.getElementById('editProductId')?.value || '';
-      const itemData = {
-        id: editId || `p_${Date.now()}`,
-        name: (document.getElementById('inpName')?.value || '').trim(),
-        basis: (document.getElementById('inpBasis')?.value || '').trim(),
-        category: document.getElementById('inpCategory')?.value || 'Бензин',
-        delivery: document.getElementById('inpDelivery')?.value || 'ЖД',
-        price: Math.max(0, parseInt(document.getElementById('inpPrice')?.value, 10) || 0),
-        density: Math.max(0.4, parseFloat(document.getElementById('inpDensity')?.value) || 0.83),
-        note: (document.getElementById('inpNote')?.value || '').trim()
-      };
-
-      if (editId) {
-        const idx = products.findIndex(p => p.id === editId);
-        if (idx !== -1) products[idx] = itemData;
-        showToast('Позиция обновлена');
-      } else {
-        products.unshift(itemData);
-        showToast('Новая позиция добавлена');
-      }
-
-      persistLocalOverride();
-      updateStatsAndSelectors();
-      renderPriceList();
-      renderAdminTable();
-      resetAdminForm();
-    }
-
-    function editAdminProduct(id) {
-      const product = products.find(p => p.id === id);
-      if (!product) return;
-      document.getElementById('editProductId').value = product.id;
-      document.getElementById('inpName').value = product.name;
-      document.getElementById('inpBasis').value = product.basis;
-      document.getElementById('inpCategory').value = product.category;
-      document.getElementById('inpDelivery').value = product.delivery;
-      document.getElementById('inpPrice').value = product.price;
-      document.getElementById('inpDensity').value = product.density;
-      document.getElementById('inpNote').value = product.note || '';
-      document.getElementById('adminFormTitle').textContent = 'Редактировать позицию';
-      document.getElementById('adminSubmitBtn').textContent = 'Сохранить';
-      document.getElementById('adminCancelEditBtn').classList.remove('hidden');
-      checkComplianceLive();
-    }
-
-    function deleteAdminProduct(id) {
-      products = products.filter(p => p.id !== id);
-      persistLocalOverride();
-      updateStatsAndSelectors();
-      renderPriceList();
-      renderAdminTable();
-      showToast('Позиция удалена', 'warning');
-    }
-
-    function resetAdminForm() {
-      document.getElementById('adminProductForm')?.reset();
-      document.getElementById('editProductId').value = '';
-      document.getElementById('adminFormTitle').textContent = 'Добавить новую позицию';
-      document.getElementById('adminSubmitBtn').textContent = 'Добавить';
-      document.getElementById('adminCancelEditBtn')?.classList.add('hidden');
-      document.getElementById('complianceWarningBox')?.classList.add('hidden');
-    }
-
-    function downloadPricesJson() {
-      const payload = {
-        updatedAt: new Date().toLocaleString('ru-RU', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }),
-        products: products
-      };
-      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json;charset=utf-8' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'prices.json';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-      showToast('Файл prices.json скачан');
-    }
-
-    async function handleResetDefaults() {
-      const btn = document.getElementById('resetDefaultBtn');
-      if (!resetConfirmPending) {
-        resetConfirmPending = true;
-        if (btn) btn.textContent = 'Подтвердить сброс?';
-        resetConfirmTimer = setTimeout(() => {
-          resetConfirmPending = false;
-          if (btn) btn.textContent = 'Сбросить к серверным';
-        }, 4000);
-        return;
-      }
-
-      clearTimeout(resetConfirmTimer);
-      resetConfirmPending = false;
-      if (btn) btn.textContent = 'Сбросить к серверным';
-
-      try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
-      await loadProducts();
-      updateStatsAndSelectors();
-      renderPriceList();
-      renderAdminTable();
-      resetAdminForm();
-      showToast('Загружены актуальные серверные цены');
-    }
-
-    // =========================================================================
-    // 9. QUOTE / LEAD SUBMISSION (DIRECT TO TELEGRAM VIA GOOGLE APPS SCRIPT)
+    // 7. QUOTE / LEAD SUBMISSION (DIRECT TO TELEGRAM VIA GOOGLE APPS SCRIPT)
     // =========================================================================
     function openQuoteModal(subjectText = '', defaultRole = 'Прямой покупатель') {
-      document.getElementById('quoteForm')?.classList.remove('hidden');
-      document.getElementById('quoteSuccessView')?.classList.add('hidden');
-      const subjectEl = document.getElementById('qSubject');
-      const roleEl = document.getElementById('qRole');
-      if (subjectEl) subjectEl.value = subjectText;
-      if (roleEl) roleEl.value = defaultRole;
-      document.getElementById('quoteModal')?.classList.remove('hidden');
-    }
-
-    function openQuoteForProduct(productId) {
-      const p = products.find(item => item.id === productId);
-      if (!p) { openQuoteModal(); return; }
-      openQuoteModal(`Запрос точного расчета и паспорта качества:\n${p.name} (${p.delivery}) — ${formatRub(p.price)}/т\n${p.basis}`);
-    }
-
-    function closeQuoteModal() {
-      document.getElementById('quoteModal')?.classList.add('hidden');
-    }
-
-    async function submitQuoteForm(event) {
-      event.preventDefault();
-      const submitBtn = document.getElementById('qSubmitBtn');
-      const origText = submitBtn ? submitBtn.textContent : 'Отправить заявку';
-
-      const payload = {
-        source: 'website_lead',
-        name: (document.getElementById('qName')?.value || '').trim(),
-        contact: (document.getElementById('qContact')?.value || '').trim(),
-        role: document.getElementById('qRole')?.value || '',
-        subject: (document.getElementById('qSubject')?.value || '').trim(),
-        destination: (document.getElementById('qComment')?.value || '').trim(),
-        pageUrl: window.location.href
-      };
-
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Отправляем заявку...';
-      }
-
-      if (LEADS_API_URL) {
-        try {
-          // Use no-cors text/plain so Google Apps Script accepts cross-origin POST smoothly
-          await fetch(LEADS_API_URL, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-            body: JSON.stringify(payload)
-          });
-        } catch (err) {
-          console.warn('Ошибка отправки заявки в API:', err);
-        }
-      }
-
-      if (submitBtn) {
-        submitBtn.disabled = false;
-        submitBtn.textContent = origText;
-      }
-
-      document.getElementById('quoteForm')?.classList.add('hidden');
-      document.getElementById('quoteSuccessView')?.classList.remove('hidden');
-      showToast('Заявка на точный расчет отправлена');
-    }
-
+// ... existing code ... -->
     // =========================================================================
-    // 10. INITIALIZATION
+    // 8. INITIALIZATION
     // =========================================================================
     document.addEventListener('DOMContentLoaded', async () => {
       await loadProducts();
@@ -2069,7 +1196,6 @@
 
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
-          closeAdminModal();
           closeQuoteModal();
         }
       });

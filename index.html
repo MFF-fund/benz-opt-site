@@ -955,6 +955,11 @@
             <input id="qComment" type="text" required placeholder="Укажите город доставки или код/название ЖД-станции" class="w-full px-3.5 py-2.5 rounded-xl border border-carbon-700 bg-carbon-900 text-white text-sm focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 outline-none" />
           </div>
 
+          <label for="qPrivacyConsent" class="flex items-start gap-3 cursor-pointer rounded-xl p-3 bg-carbon-900/60 border border-carbon-700 text-xs sm:text-sm text-zinc-300 leading-relaxed">
+            <input id="qPrivacyConsent" name="privacyConsent" type="checkbox" required class="mt-0.5 w-4 h-4 shrink-0 accent-brand-500 cursor-pointer" />
+            <span>Я даю согласие на хранение и обработку персональных данных. Подтверждаю, что ознакомлен(а) с политикой конфиденциальности. <span class="text-brand-400">*</span></span>
+          </label>
+
           <button id="qSubmitBtn" type="submit" class="w-full py-3.5 rounded-xl bg-brand-500 hover:bg-brand-400 text-white font-bold text-sm shadow-lg shadow-brand-500/20 transition cursor-pointer">
             Отправить заявку на точный расчет
           </button>
@@ -1527,6 +1532,8 @@
       const roleEl = document.getElementById('qRole');
       if (subjectEl) subjectEl.value = subjectText;
       if (roleEl) roleEl.value = defaultRole;
+      const consentEl = document.getElementById('qPrivacyConsent');
+      if (consentEl) consentEl.checked = false;
       document.getElementById('quoteModal')?.classList.remove('hidden');
     }
 
@@ -1544,6 +1551,11 @@
       event.preventDefault();
       const submitBtn = document.getElementById('qSubmitBtn');
       const origText = submitBtn ? submitBtn.textContent : 'Отправить заявку';
+      const consentEl = document.getElementById('qPrivacyConsent');
+      if (!consentEl || !consentEl.checked) {
+        consentEl?.reportValidity();
+        return;
+      }
 
       const payload = {
         source: 'website_lead',
@@ -1552,6 +1564,7 @@
         role: document.getElementById('qRole')?.value || '',
         subject: (document.getElementById('qSubject')?.value || '').trim(),
         destination: (document.getElementById('qComment')?.value || '').trim(),
+        privacyConsent: true,
         pageUrl: window.location.href
       };
 
